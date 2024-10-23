@@ -1,0 +1,336 @@
+@media (max-width: 600px) {
+  .wrapper {
+    padding: 0 16px;
+  }
+
+  .header-wrapper .hero {
+    display: block;
+    height: auto; /* Висота адаптується під вміст */
+    text-align: center;
+  }
+
+  .hero-right img {
+    max-width: 100%; /* Зображення підлаштовується під екран */
+    margin-top: 16px;
+  }
+
+  .footer-container {
+    display: block; /* Стає вертикальним на малих екранах */
+    text-align: center;
+  }
+
+  .social-icons img {
+    margin: 0 5px;
+  }
+}
+/* Загальні стилі для зображень */
+img {
+  max-width: 100%; /* Зображення не виходитиме за межі контейнера */
+  height: auto; /* Зберігає пропорції */
+  display: block; /* Уникнення зайвих проміжків під зображенням */
+}
+
+/* Для карток постів */
+.blogpost-card .thumbnail-image img {
+  width: 100%; /* Займає всю ширину контейнера */
+  height: 200px; /* Фіксована висота */
+  object-fit: cover; /* Обрізає зайве, зберігаючи пропорції */
+  border-radius: 8px; /* Округлені краї */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Легка тінь */
+}
+
+/* Головне зображення у хедері */
+.hero-right img {
+  width: 100%; /* Зображення адаптується під ширину контейнера */
+  max-width: 500px; /* Максимальна ширина */
+  height: auto; /* Пропорційне масштабування */
+  border-radius: 10px;
+  box-shadow: 0 4px 13px -3px rgba(0, 0, 0, 0.2); /* Тінь для глибини */
+}
+
+/* Логотипи та іконки соцмереж */
+.logo-icon img, 
+.footer-left img, 
+.social-icons img {
+  width: 40px; /* Фіксований розмір */
+  height: 40px;
+  object-fit: contain; /* Масштабується без обрізання */
+  margin-right: 8px;
+  border-radius: 50%; /* Іконки стають круглими */
+  background-color: #fff; /* Білі фони для контрасту */
+  padding: 4px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Arial", "Helvetica", sans-serif;
+  background-color: #53a5cf;; /* Світло-білий фон */
+}
+
+.wrapper {
+  width: 1152px;
+  margin: 0 auto;
+  padding: 0 120px;
+}
+
+.wrapper p {
+  line-height: 2;
+  margin-bottom: 20px;
+}
+
+/* Top Nav */
+
+.top-nav {
+  position: fixed;
+  left: 0;
+  right: 0;
+  background: #f2f07c;
+  padding: 8px 0;
+  z-index: 200;
+}
+
+.top-nav .wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-nav nav ul {
+  display: flex;
+  list-style: none;
+}
+
+.top-nav nav ul li a {
+  color: #53a5cf;
+  text-decoration: none;
+  margin: 0 15px;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+/* Hero Section */
+
+.header-wrapper {
+  max-width: 1152px;
+  margin: 0 auto;
+  background:  #53a5cf; /* Світлий кремовий */
+  height: 100vh;
+}
+
+.header-wrapper .hero {
+  display: flex;
+}
+
+.header-wrapper .hero .hero-left {
+  align-self: center;
+  padding-left: 100px;
+}
+
+.header-wrapper .hero h1.main-heading {
+  color:#53a5cf; /* Блакитний */
+  font-family: "Arial", "Helvetica", sans-serif;
+  font-size: 64px;
+}
+
+.header-wrapper .hero p.main-subheading {
+  color: #f2f07c; /* Приглушений жовтий */
+  font-size: 18px;
+  margin-bottom: 24px;
+}
+
+a.btn {
+  background: #f2f07c;/* Лимонно-жовтий */
+  color: #53a5cf;
+  text-decoration: none;
+  padding: 8px 24px;
+  display: inline-block;
+  font-size: 16px;
+}
+
+/* Blog Section */
+
+h2 {
+  font-size: 24px;
+  text-transform: uppercase;
+  margin-bottom: 36px;
+  color: #53a5cf;
+  position: relative;
+}
+
+h2::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 48px;
+  background: #53a5cf;
+  bottom: -8px;
+  left: 0;
+}
+/* Секція меню */
+.posts-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  margin: 50px 0;
+}
+
+/* Картка страви */
+.blogpost-card {
+  background: #ffffff;;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.blogpost-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Зображення в картці */
+.thumbnail-image img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Заголовок страви */
+.blogpost-card h3 {
+  font-size: 28px;
+  margin: 12px 0;
+  color:#53a5cf;
+}
+
+/* Текст опису та ціна */
+.blogpost-card p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #f2f07c; /* Жовтий */
+}
+
+.price {
+  display: block;
+  margin: 8px 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: #53a5cf; /* Світло-блакитний */
+}
+
+/* Кнопка "Детальніше" */
+.blogpost-card a.read-more {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 10px 20px;
+  background: #f2f07c;
+  color: #53a5cf;;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.blogpost-card a.read-more:hover {
+  background: #ebcc5e;
+}
+
+
+/* Cards Section */
+
+.blogpost-card {
+  padding: 50px 0; 
+  border-bottom: 1px solid #005bbb;
+}
+
+.blogpost-card h3 {
+  font-family: "Arial", "Helvetica", sans-serif;
+  font-size: 36px;
+  color: #3e2c23;
+  margin-bottom: 12px;
+}
+
+/* Contact Us Section */
+
+.contact-container {
+  margin-top: 100px;
+  background: #f7ede2;
+  box-shadow: 0 4px 13px -3px rgba(0, 0, 0, 0.1);
+  padding: 32px;
+}
+
+.contact-container form input[type="text"],
+.contact-container form textarea {
+  padding: 8px 24px;
+  margin-bottom: 10px;
+  border: 1px solid #005bbb;
+}
+
+.contact-container form input[type="submit"] {
+  background: #f2f07c; /* Яскраво-жовтий */
+  color: #005bbb; /* Блакитний */
+  border: none;
+  width: 150px;
+  padding: 8px 24px;
+  font-weight: bold;
+}
+
+/* Footer */
+
+footer {
+  background: #f2f07c;
+  color: #005bbb;
+  padding: 36px;
+  margin-top: 100px;
+  text-align: center;
+}
+
+footer a {
+  color: #005bbb;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-container .social-icons img {
+  margin: 0 10px;
+  width: 24px;
+  height: 24px;
+}
+
+/* Media Queries for Mobile */
+
+@media (max-width: 600px) {
+  .wrapper {
+    padding: 0 16px;
+  }
+
+  .header-wrapper .hero {
+    display: block;
+    height: 100vh;
+  }
+
+  .header-wrapper h1.main-heading {
+    font-size: 48px;
+  }
+
+  .contact-container {
+    padding: 16px;
+  }
+
+  footer {
+    text-align: center;
+  }
+}

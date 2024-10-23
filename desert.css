@@ -1,0 +1,58 @@
+/* Логотипи та іконки соцмереж */
+.logo-icon img, 
+.footer-left img, 
+.social-icons img {
+  width: 40px; /* Фіксований розмір */
+  height: 40px;
+  object-fit: contain; /* Масштується без обрізання */
+  margin-right: 8px;
+  border-radius: 50%; /* Іконки стають круглими */
+  background-color: #f2f07c; /* Жовтий фон для контрасту */
+  padding: 4px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family:"Arial", "Helvetica", sans-serif;
+}
+
+/* Таблиця меню */
+.menu-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 18px;
+  text-align: left;
+}
+
+.menu-table th, 
+.menu-table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #005bbb; /* Блакитна межа */
+}
+
+.menu-table thead tr {
+  background-color: #f2f07c; /* Яскраво-жовтий фон для заголовка */
+  color: #3e2c23; /* Коричневий текст */
+}
+
+.menu-table tbody tr:nth-child(even) {
+  background-color: #d0e1f9; /* Світло-блакитний фон */
+}
+
+.menu-table img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.menu-table tbody tr:hover {
+  background-color: #ebcc5e; /* Жовтий при наведенні */
+  transition: background-color 0.3s;
+}
