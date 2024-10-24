@@ -1,0 +1,81 @@
+/* Загальні стилі для всіх пристроїв */
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 15px; /* Відстань між блоками */
+}
+
+.blogpost-card {
+  flex: 1 1 calc(75% - 15px); /* Кожен блок займає 25% простору */
+  max-width: calc(75% - 15px);
+  min-width: 850px; /* Мінімальна ширина для гарного вигляду */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  transition: transform 0.3s; /* Анімація при наведенні */
+}
+
+.blogpost-card:hover {
+  transform: scale(1.05); /* Легка анімація при наведенні */
+}
+
+/* Зображення всередині картки */
+.thumbnail-image img {
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  height: auto;
+}
+
+/* Текст у картці */
+.post-title {
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.price {
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+}
+
+/* Кнопка у картці */
+.read-more {
+  display: block;
+  text-align: center;
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.read-more:hover {
+  background-color: #0056b3;
+}
+
+/* Мобільні пристрої (до 768px) */
+@media (max-width: 768px) {
+  .blogpost-card {
+    flex: 1 1 100%; /* Один блок на весь екран */
+    max-width: 100%;
+  }
+}
+
+/* Планшети (768px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .blogpost-card {
+    flex: 1 1 calc(50% - 15px); /* Два блоки в ряд */
+    max-width: calc(50% - 15px);
+  }
+}
+
+/* Ноутбуки та ПК (понад 1024px) */
+@media (min-width: 1025px) {
+  .blogpost-card {
+    flex: 1 1 calc(25% - 15px); /* Чотири блоки в ряд */
+    max-width: calc(25% - 15px);
+  }
+}
